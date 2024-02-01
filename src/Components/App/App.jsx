@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Navigate } from "react-router-dom";
 import utils from "../../utils"
+import Dashboard from '../Dashboard/Dashboard';
 
 function App() {
   const [user, setUser] = useState(null)
@@ -19,9 +20,12 @@ function App() {
 
   return (
     <div>
-      {(!user && !loading) &&(
+      {(!user && !loading)
+        ?(
           <Navigate to="/login" replace={true} />
-        )}
+        )
+        :<Dashboard></Dashboard>
+        }
         <div>App</div>
     </div>
   )
