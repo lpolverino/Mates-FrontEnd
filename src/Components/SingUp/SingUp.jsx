@@ -29,7 +29,9 @@ const SingUp = () => {
       })
       if(response.ok) {
         const data = await response.json()
-        data.message && navigate("/")
+        console.log(data);
+        utils.setUser(data.user)
+        data.message && navigate("/profile")
       }
 
       setError(`There was an HTTP ERROR:${response.status}`)

@@ -27,7 +27,7 @@ const Login = () => {
     if(!response.ok){
       setError(`There was an error handling the login ${data.error}`)
     }
-
+    
     navigate("/")
   }
 

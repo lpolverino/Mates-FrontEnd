@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './Components/App/App.jsx'
 import Login from './Components/Login/Login.jsx';
+import Profile from './Components/Profile/Profile.jsx';
 import { createBrowserRouter,RouterProvider, Navigate} from 'react-router-dom';import './index.css'
 import SingUp from './Components/SingUp/SingUp.jsx';
 
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path:"sing-up",
     element:<SingUp></SingUp>
+  },
+  {
+    path:"profile",
+    element:<Profile></Profile>
   }
 ]);
 

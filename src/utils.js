@@ -1,12 +1,14 @@
 
-const getUser = async() =>{
+const setUser = (user) =>{
+    sessionStorage.setItem("user", user);
+}
 
-    const user = getToken() ? true : null
-    return user
+const getUser = async() =>{
+    const user = sessionStorage.getItem("user");
+    return user??null
 }
 
 const getBackendUrl = () =>{
-
     return "http://localhost:3002/"
 }
 
@@ -23,4 +25,5 @@ export default {
     getBackendUrl,
     setToken,
     getToken,
+    setUser
 }
