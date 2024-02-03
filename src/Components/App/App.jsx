@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, createContext } from 'react'
 import { Navigate } from "react-router-dom";
 import utils from "../../utils"
 import Dashboard from '../Dashboard/Dashboard';
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -32,4 +32,3 @@ function App() {
 
 }
 
-export default App

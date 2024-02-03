@@ -23,7 +23,7 @@ const Login = () => {
 
     const data = await response.json()
     utils.setToken(data.token)
-
+    utils.setUser(data.user)
     if(!response.ok){
       setError(`There was an error handling the login ${data.error}`)
     }
